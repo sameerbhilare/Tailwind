@@ -5,7 +5,12 @@ module.exports = {
     debugScreens: {
       position: ['top', 'left'],
     },
-    extend: {},
+    extend: {
+      // with this change, 'font-headline' font will be available in our HTML page
+      fontFamily: {
+        headline: ['Oswald'],
+      },
+    },
   },
   variants: {
     extend: {},
