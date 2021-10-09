@@ -17,7 +17,7 @@
              </div>
          </section>
 
-         <section id="image_services" class="grid grid-cols-2 gap-10 mt-8">
+         <section id="image_services" class="grid grid-cols-2 gap-5 mt-8 md:gap-10">
              <!-- picture  -->
              <div id = "image" class="ml-auto">
                  <img src = "img/tom.jpg" alt = "Tom Gonzales Online Training">
@@ -27,24 +27,32 @@
              <div id = "services">
                  <h3>I offer you:</h3>
                  <ul class="ml-6 list-disc">
-                     <li class="mb-4 text-xl">Lessons via Skype and you can record all sessions and watch them again later. </li>
-                     <li class="mb-4 text-xl">Holistic full body training</li>
-                     <li class="mb-4 text-xl">Training without equipment</li>
-                     <li class="mb-4 text-xl">Pain reduction</li>
-                     <li class="mb-4 text-xl">Tailored nutrition plans</li>
+                     <li>Lessons via Skype and you can record all sessions and watch them again later. </li>
+                     <li>Holistic full body training</li>
+                     <li>Training without equipment</li>
+                     <li>Pain reduction</li>
+                     <li>Tailored nutrition plans</li>
                  </ul>
-                 <h3 class="mt-10">My qualifications:</h3>
-                 <ul class="ml-6 list-disc">
-                     <li class="mb-4 text-xl">Certified nutritionist</li>
-                     <li class="mb-4 text-xl">Certified fitness trainer</li>
-                     <li class="mb-4 text-xl">5 years of experience in 1: 1 training</li>
+                 <!-- only for >= md -->
+                 <h3 class="hidden mt-10 md:block">My qualifications:</h3>
+                 <ul class="hidden ml-6 list-disc md:block">
+                     <li>Certified nutritionist</li>
+                     <li>Certified fitness trainer</li>
+                     <li>5 years of experience in 1: 1 training</li>
                  </ul>
              </div>
          </section>
+         <!-- only for small resolution <=sm -->
+        <h3 class="mt-5 md:mt-10 md:hidden">My qualifications:</h3>
+        <ul class="ml-6 list-disc md:hidden">
+            <li class="leading-5 md:leading-normal">Certified nutritionist</li>
+            <li class="leading-5 md:leading-normal">Certified fitness trainer</li>
+            <li class="leading-5 md:leading-normal">5 years of experience in 1: 1 training</li>
+        </ul>
 
          <!-- Prices and payment -->
          <section id = "price_payment" class="mt-8">
-             <div class="w-8/12 mx-auto">
+             <div class="md:mx-auto md:w-8/12">
                  <h2>Prices and payment</h2>
                  <p>My most important goal is that you get ahead with your goals.</p>
                  <p>In a free opening session we will discuss what you want to achieve and how much you can or want to spend. Then we are guaranteed to find a solution that suits you.</p>
@@ -53,7 +61,7 @@
 
          <!-- Contact  -->
          <section id="contact" class="mt-8 mb-10">
-             <div class="grid w-8/12 grid-cols-2 gap-4 mx-auto">
+             <div class="grid grid-cols-2 gap-4 md:mx-auto md:w-8/12">
                  <div id = "email">
                      <p>Your message:</p>
                      <a class="flex items-center px-4 py-2 transition bg-gray-300 rounded shadow-sm w-max hover:bg-gray-400 hover:shadow-none focus:ring-2 focus:ring-yellow-400" href="#">
