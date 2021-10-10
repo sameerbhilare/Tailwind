@@ -594,8 +594,8 @@ body {
 h1 {
   margin-bottom: 1.5rem;
   font-family: Oswald;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   --tw-text-opacity: 1;
   color: rgba(33, 47, 73, var(--tw-text-opacity));
 }
