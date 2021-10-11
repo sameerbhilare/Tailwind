@@ -1,89 +1,121 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html x-data="{isDark: false}" x-bind:class="isDark ? 'dark': '' " lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Project</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="bg-mainColor debug-screens">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine-ie11.min.js" defer></script>
+  </head>
+  <body class="bg-mainColor debug-screens">
     <div class="container min-h-screen px-6 py-8 mx-auto bg-gray-100 dark:bg-gray-900">
-         <!-- page header / headings -->
-         <section id="header">
-             <div class="text-center">
-                 <h1 class="leading-snug">Tom Gonzales home training<br>
-                    <span class="text-4xl italic text-indigo-900 dark:text-indigo-300 sm:text-5xl lg:text-7xl opacity-80">
-                        <q> &nbsp;I'll get you in shape!&nbsp; </q>
-                    </span>
-                </h1>
-                 <h2>Muscle building • Functional training<br class="sm:hidden"><span class="hidden sm:inline"> • </span>Nutritional advice</h2>
-             </div>
-         </section>
+      <!-- page header / headings -->
+      <section id="header">
+        <button @click="isDark =!isDark" class="bg-gray-300 rounded">Toggle Dark Mode</button>
+        <div class="text-center">
+          <h1 class="leading-snug">
+            Tom Gonzales home training<br />
+            <span
+              class="text-4xl italic text-indigo-900 dark:text-indigo-300 sm:text-5xl lg:text-7xl opacity-80"
+            >
+              <q> &nbsp;I'll get you in shape!&nbsp; </q>
+            </span>
+          </h1>
+          <h2>
+            Muscle building • Functional training<br class="sm:hidden" /><span
+              class="hidden sm:inline"
+            >
+              • </span
+            >Nutritional advice
+          </h2>
+        </div>
+      </section>
 
-         <section id="image_services" class="grid mt-8 sm:grid-cols-2 sm:gap-5 xl:w-9/12 md:gap-10 xl:mx-auto">
-             <!-- picture  -->
-             <div id = "image" class="mx-auto sm:ml-auto mb-7 sm:mb-0">
-                 <img src = "img/tom.jpg" alt = "Tom Gonzales Online Training">
-             </div>
-             
-             <!-- Services  -->
-             <div id = "services">
-                 <h3>I offer you:</h3>
-                 <ul class="ml-6 list-disc">
-                     <li>Lessons via Skype and you can record all sessions and watch them again later. </li>
-                     <li>Holistic full body training</li>
-                     <li>Training without equipment</li>
-                     <li>Pain reduction</li>
-                     <li>Tailored nutrition plans</li>
-                 </ul>
-                 <!-- only for >= md -->
-                 <section id="quali_right" class="md:block">
-                    <h3 class="hidden mt-10">My qualifications:</h3>
-                    <ul class="hidden ml-6 list-disc">
-                        <li>Certified nutritionist</li>
-                        <li>Certified fitness trainer</li>
-                        <li>5 years of experience in 1: 1 training</li>
-                    </ul>
-                </section>
-             </div>
-         </section>
-         <!-- only for small resolution <=sm -->
-         <section id="quali_bottom" class="md:hidden">
-             <h3 class="mt-5 md:mt-10">My qualifications:</h3>
-             <ul class="ml-6 list-disc">
-                 <li class="leading-5 md:leading-normal">Certified nutritionist</li>
-                 <li class="leading-5 md:leading-normal">Certified fitness trainer</li>
-                 <li class="leading-5 md:leading-normal">5 years of experience in 1: 1 training</li>
-             </ul>
-         </section>
+      <section
+        id="image_services"
+        class="grid mt-8 sm:grid-cols-2 sm:gap-5 xl:w-9/12 md:gap-10 xl:mx-auto"
+      >
+        <!-- picture  -->
+        <div id="image" class="mx-auto sm:ml-auto mb-7 sm:mb-0">
+          <img src="img/tom.jpg" alt="Tom Gonzales Online Training" />
+        </div>
 
-         <!-- Prices and payment -->
-         <section id = "price_payment" class="mt-8">
-             <div class="lg:mx-auto lg:w-8/12 xl:w-7/12">
-                 <h2 class="xl:text-3xl">Prices and payment</h2>
-                 <p>My most important goal is that you get ahead with your goals.</p>
-                 <p class="text-justify">In a free opening session we will discuss what you want to achieve and how much you can or want to spend. Then we are guaranteed to find a solution that suits you.</p>
-             </div>
-         </section>
+        <!-- Services  -->
+        <div id="services">
+          <h3>I offer you:</h3>
+          <ul class="ml-6 list-disc">
+            <li>Lessons via Skype and you can record all sessions and watch them again later.</li>
+            <li>Holistic full body training</li>
+            <li>Training without equipment</li>
+            <li>Pain reduction</li>
+            <li>Tailored nutrition plans</li>
+          </ul>
+          <!-- only for >= md -->
+          <section id="quali_right" class="md:block">
+            <h3 class="hidden mt-10">My qualifications:</h3>
+            <ul class="hidden ml-6 list-disc">
+              <li>Certified nutritionist</li>
+              <li>Certified fitness trainer</li>
+              <li>5 years of experience in 1: 1 training</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- only for small resolution <=sm -->
+      <section id="quali_bottom" class="md:hidden">
+        <h3 class="mt-5 md:mt-10">My qualifications:</h3>
+        <ul class="ml-6 list-disc">
+          <li class="leading-5 md:leading-normal">Certified nutritionist</li>
+          <li class="leading-5 md:leading-normal">Certified fitness trainer</li>
+          <li class="leading-5 md:leading-normal">5 years of experience in 1: 1 training</li>
+        </ul>
+      </section>
 
-         <!-- Contact  -->
-         <section id="contact" class="mt-8 mb-10">
-             <div class="flex items-center justify-around lg:mx-auto lg:w-8/12">
-                 <div id = "email">
-                     <p>Your message:</p>
-                     <a class="flex items-center px-4 py-2 transition bg-gray-300 rounded shadow-sm dark:bg-gray-500 dark:text-white dark:hover:bg-gray-600 w-max hover:bg-gray-400 hover:shadow-none focus:ring-2 focus:ring-yellow-400" href="#">
-                        <svg class="h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>
-                        <span class="text-lg 2xl:text-2xl">Send an Email</span>
-                    </a>
-                 </div>
-                 <div id = "whatsApp_telefon">
-                     <p>WhatsApp:</p>
-                     <span class="text-lg 2xl:text-2xl dark:text-gray-100">1 222 555 44 33</span>
-                 </div>
-             </div>
-         </section>
-         
+      <!-- Prices and payment -->
+      <section id="price_payment" class="mt-8">
+        <div class="lg:mx-auto lg:w-8/12 xl:w-7/12">
+          <h2 class="xl:text-3xl">Prices and payment</h2>
+          <p>My most important goal is that you get ahead with your goals.</p>
+          <p class="text-justify">
+            In a free opening session we will discuss what you want to achieve and how much you can
+            or want to spend. Then we are guaranteed to find a solution that suits you.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact  -->
+      <section id="contact" class="mt-8 mb-10">
+        <div class="flex items-center justify-around lg:mx-auto lg:w-8/12">
+          <div id="email">
+            <p>Your message:</p>
+            <a
+              class="flex items-center px-4 py-2 transition bg-gray-300 rounded shadow-sm dark:bg-gray-500 dark:text-white dark:hover:bg-gray-600 w-max hover:bg-gray-400 hover:shadow-none focus:ring-2 focus:ring-yellow-400"
+              href="#"
+            >
+              <svg
+                class="h-4 mr-1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-at-sign"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+              </svg>
+              <span class="text-lg 2xl:text-2xl">Send an Email</span>
+            </a>
+          </div>
+          <div id="whatsApp_telefon">
+            <p>WhatsApp:</p>
+            <span class="text-lg 2xl:text-2xl dark:text-gray-100">1 222 555 44 33</span>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 </html>
