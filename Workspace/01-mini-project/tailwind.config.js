@@ -1,16 +1,16 @@
 module.exports = {
   /*
-    If you replace “ enabled: true ” with “enabled: false”, then it no longer works. You should only
-    set it to “true” if you want to publish the project.
-    You should also temporarily set “enabled” back to false if you want to make subsequent
+    You should only set 'enabled' to 'true' for production build as it will removed unused css styles.
+    You should also temporarily set 'enabled' back to 'false' if you want to make subsequent
     changes to the tailwind.css or the Tailwind configuration
     (new plugins or changes in the tailwind.config.js ).
+
     Background info:
     https://tailwindcss.com/docs/optimizing-for-production
   */
   purge: {
-    enabled: true, // set to false
-    content: ['./dist/**/*.html'],
+    enabled: false, // set to 'true' only for production
+    content: ['./dist/**/*.html'], // look in all html files under /dist folder to check which styles are used
   },
   // 'media' - means it it set darkMode based on device setting.
   darkMode: 'class', // false or 'media' or 'class'
